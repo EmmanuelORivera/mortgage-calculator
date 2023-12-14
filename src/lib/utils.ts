@@ -7,18 +7,20 @@ export function cn(...inputs: ClassValue[]) {
 
 export function mortgagePayments(
   principalLoanAmount: number,
-  yearlyInterestRatePercentage: number,
+  annualInterestRatePercentage: number,
   loanTermInYears: number
 ): number {
   const totalOfMonths = 12
 
-  const monthlyInterestRate = yearlyInterestRatePercentage / totalOfMonths / 100
+  const monthlyInterestRate = annualInterestRatePercentage / totalOfMonths / 100
   const totalOfPayments = loanTermInYears * totalOfMonths
 
-  return (
-    (principalLoanAmount *
-      monthlyInterestRate *
-      Math.pow(1 + monthlyInterestRate, totalOfPayments)) /
-    (Math.pow(1 + monthlyInterestRate, totalOfPayments) - 1)
+  return Number(
+    (
+      (principalLoanAmount *
+        monthlyInterestRate *
+        Math.pow(1 + monthlyInterestRate, totalOfPayments)) /
+      (Math.pow(1 + monthlyInterestRate, totalOfPayments) - 1)
+    ).toFixed(2)
   )
 }
