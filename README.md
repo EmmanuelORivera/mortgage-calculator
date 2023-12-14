@@ -47,7 +47,7 @@ npm run dev
 6. Typescript
 
 
-### Reservation System
+### System
 This system is designed to calculate the monthly payment from a loan based on the mortgage payment formula:
 ```sh
  Payment = (P * (r * (1 + r)^n)) / ((1 + r)^n - 1)
