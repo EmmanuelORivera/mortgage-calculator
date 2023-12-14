@@ -1,6 +1,6 @@
 # Mortgage Calculator
 
-Welcome to **Mortgage Calculator**, a project designed to streamline the reservation process, facilitate restaurant ratings, and enhance user experiences.
+Welcome to **Mortgage Calculator**, a project designed to translate a home price or loan amount into the corresponding monthly payment.
 
 ## Live Demo
 Visit this page at https://mortgage-calculator-murex-phi.vercel.app/
