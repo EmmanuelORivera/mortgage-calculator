@@ -56,4 +56,18 @@ describe('morgagePayments function', () => {
 
     expect(result.toFixed(2)).toBe('2612.44')
   })
+
+  it('should handle annualInterestRatePercentage of 0', () => {
+    const principalLoanAmount = 425000
+    const annualInterestRatePercentage = 0
+    const loanTermInYears = 30
+
+    const result = mortgagePayments(
+      principalLoanAmount,
+      annualInterestRatePercentage,
+      loanTermInYears
+    )
+
+    expect(result).toBe(1180.56)
+  })
 })

@@ -12,6 +12,12 @@ export function mortgagePayments(
 ): number {
   const totalOfMonths = 12
 
+  if (annualInterestRatePercentage === 0) {
+    return Number(
+      (principalLoanAmount / (loanTermInYears * totalOfMonths)).toFixed(2)
+    )
+  }
+
   const monthlyInterestRate = annualInterestRatePercentage / totalOfMonths / 100
   const totalOfPayments = loanTermInYears * totalOfMonths
 
